@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="talent.html">Talent ID</a></div>
+    </header>
+    <main class="container">
+        <h1>Book a Demo</h1>
+        <p>Select a date and time for your demo:</p>
+        <form id="bookingForm">
+            <label for="demo-date">Date:</label>
+            <input type="date" id="demo-date" name="demo-date" required>
+            <br><br>
+            <label for="demo-time">Time:</label>
+            <input type="time" id="demo-time" name="demo-time" required>
+            <br><br>
+            <button type="submit" class="btn">Confirm</button>
+        </form>
+    </main>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById("bookingForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form from reloading the page
+
+            // Get the selected date and time
+            const date = document.getElementById("demo-date").value;
+            const time = document.getElementById("demo-time").value;
+
+            // Simple validation
+            if (date && time) {
+                alert(`Demo booked successfully on ${date} at ${time}`);
+            } else {
+                alert("Please select a valid date and time.");
+            }
+        });
+    </script>
+</body>
+</html>

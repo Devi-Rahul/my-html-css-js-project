@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent ID</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .btn:hover {
+            background-color: #350e94;
+        }
+        .tio{
+            display: flex;
+            
+        }
+        /* Header */
+        .header {
+            background-color: whitesmoke;
+            color: black;
+            margin-left: 23%;
+            border-radius: 50px;
+            width: 50%;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+       
+        .header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: black;
+        }
+
+        .header .navigation ul {
+            list-style: none;
+            padding: 0;
+            
+            color: #070707;
+            gap: 30px;
+            margin: 0;
+        }
+
+        .header .navigation a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .header .navigation a:hover {
+            text-decoration: underline;
+        }
+        .net{
+            background-color: #603998;
+        }
+        
+        .header .login {
+            background-color: #603998;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .header .login:hover {
+            background-color: #350e94;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header .navigation ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        
+        }
+
+        h1, h2, h3, h4 {
+            margin: 0;
+        }
+        .tac {
+            display: flex;
+            gap: 140px;
+            margin: 100 40 40 40;
+            padding: 20px;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+           
+        }
+
+        .container-1{
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            
+        }
+
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: whitesmoke;
+            color: #070707;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #2b1b44;
+            color: white;
+        }
+
+      
+
+        .header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            
+        }
+
+        .header .navigation ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .header .navigation a {
+            color:black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #603998 ;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .hero img{
+            margin-top: 50px;
+        }
+        /* Features Section */
+        .features {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .features .feature-list {
+            display: flex;
+            gap: 20px;
+        }
+
+        .features .feature-item {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        /* dive Section */
+        .dive {
+            padding: 50px 0;
+            background-color: #603998;
+            color: white;
+            justify-content: center;
+            
+        }
+
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 0;
+            background-color: whitesmoke;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+
+        @media (max-width: 1024px) {
+            .tac {
+                margin: 0 auto;
+                display: inline;
+            }
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .features .feature-list {
+                flex-direction: column;
+            }
+
+            .header .navigation ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            .h4{
+                font-size: 2em;
+                margin: 0 auto;
+            }
+            .tac {
+                margin: 0 auto;
+                display: inline;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .hero img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+                margin-top: 20px;
+            } 
+            .h4{
+                font-size: 2em;
+                margin: 0 auto;
+            }
+            .tac {
+                margin: 0 auto;
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Header Section -->
+
+      <div class="net">
+
+     <header class="header">
+
+        <div class="logo"><img src="D:\task\logo.webp" alt="" height="40px"></div> 
+        <nav class="navigation">
+
+            <ul>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Products</a>
+                </li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+    
+        </nav>
+        <a href="login.html" class="login">Login</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>World's First Candidate Tracking System</h2>
+            <p>Check with our CTS whether you should HIRE or NOT!</p>
+         
+            <button id="bookDemoBtn" class="btn">Book a Demo</button>
+    
+    
+        <script>
+
+            // JavaScript to navigate to the booking page
+            document.getElementById("bookDemoBtn").addEventListener("click", function () {
+                window.location.href = "book-demo.html";
+            });
+        </script>
+        </div>
+
+        <img src="D:\task\148.png" alt="" width="800" height="431">
+    </section>
+</div>
+      
+    
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>By UseCase</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Better Hiring</h3>
+                    <p>Access insights into candidates to make informed hiring decisions.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Loyalty Check</h3>
+                    <p>Retain top talent and evaluate their loyalty over time.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Background Verification</h3>
+                    <p>Secure your hiring process with thorough checks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- dive Section -->
+<section id="dive" class="dive">
+    <div class="container-1">
+        <div>
+        <h2>Ready to dive in?</h2>
+        <a href="#getstarted" class="btn">Get Started</a>
+        <p> No credit card required✌</p>
+    </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container-1">
+            <div>
+            <h2>Grow with us as a Partner</h2>
+            <p>We reached here with our hard work and dedication.</p>
+            <a href="#getstarted" class="btn">Get Started</a>
+        </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+          
+            <h2>Your Questions? <br>Our Solutions!</h2>
+            <div class="tio">
+
+            <ul>
+                <li>What is Talentid.app?</li>
+                <li>How can Talentid.app help my business?</li>
+                <li>What are the key features of Talentid.app?</li>
+                <li>Is Talentid.app suitable for startups?</li>
+            </ul>
+            <img src="D:\task\deo.png" alt="" width="200px" height="200px">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="tac">
+        <div>
+        <h4>Product</h4>
+        <ul class="list">
+            <li class="1">
+                <a href="#" class="text-gray-400 hover:text-white">Features</a>
+            </li>
+            <li class="2">
+                <a href="/partnership" class="text-gray-400 hover:text-white">Integration</a>
+            </li>
+            <li class="3">
+                <a class="text-gray-400 hover:text-white" href="/pricing">Pricing</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h4>Resources</h4>
+        <ul class="list">
+            <li class="1">
+                <a href="https://blog.talentid.app/" class="text-gray-400 hover:text-white">Blogs</a>
+            </li>
+            <li class="2">
+                <a href="#" class="text-gray-400 hover:text-white">API documentation</a>
+            </li>
+            <li class="3">
+                <a href="https://talentid.tawk.help/" class="text-gray-400 hover:text-white">Knowledge base</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h4>Company</h4>
+        <ul class="list">
+            <li class="1">
+                <a class="text-gray-400 hover:text-white" href="/aboutus">About us</a>
+            </li>
+            <li class="2">
+                <a class="text-gray-400 hover:text-white" href="/contactus">Contact us</a>
+            </li>
+            <li class="3">
+                <a class="text-gray-400 hover:text-white" href="/partnership">Partnerships</a>
+            </li>
+            <li class="4">
+                <a class="text-gray-400 hover:text-white" href="/events">Events</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h4>Legal</h4>
+        <ul class="list">
+            <li class="1">
+                <a class="text-gray-400 hover:text-white" href="/terms-and-conditions">Terms &amp; Conditions</a>
+            </li>
+            <li class="2">
+                <a class="text-gray-400 hover:text-white" href="/privacy-policy">Privacy Policy</a>
+            </li>
+            <li class="3">
+                <a class="text-gray-400 hover:text-white" href="/refund">Refund Policy</a>
+            </li>
+            <li class="4">
+                <a class="text-gray-400 hover:text-white" href="/optform">Don't sell my info</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<hr>
+        <div class="container">
+            <p>Made with ❤️ from India for the World.<br>&copy; 2024 Talent ID (Brand of Hirexzo Solutions LLP) All Rights Reserved. </p>
+        </div>
+    </footer>
+</body>
+</html>
